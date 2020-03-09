@@ -61,7 +61,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-7C-erf">
-                                <rect key="frame" x="344" y="44" width="50" height="50"/>
+                                <rect key="frame" x="344" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3ni-hB-mOI"/>
                                     <constraint firstAttribute="height" constant="50" id="xmq-Ie-YFZ"/>
@@ -137,7 +137,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqf-rW-vPP" secondAttribute="trailing" constant="19" id="WzN-r2-aX9"/>
                             <constraint firstAttribute="bottom" secondItem="XWO-4j-tep" secondAttribute="bottom" id="XeZ-kG-FPG"/>
                             <constraint firstItem="RFx-kJ-Ajv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="YYi-hC-gCd"/>
-                            <constraint firstItem="uXk-7C-erf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cTK-V0-xF4"/>
+                            <constraint firstItem="uXk-7C-erf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cTK-V0-xF4"/>
                             <constraint firstItem="XWO-4j-tep" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f4Y-Rv-76Z"/>
                             <constraint firstItem="XWO-4j-tep" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fDv-ca-SGv"/>
                             <constraint firstAttribute="bottom" secondItem="rgb-KL-WvJ" secondAttribute="bottom" constant="25" id="kJZ-dr-fdH"/>

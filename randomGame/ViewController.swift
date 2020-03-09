@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var blueCar: UIImageView!
     @IBOutlet weak var redCar: UIImageView!
+    var player: AVAudioPlayer?
     
     let temp: CGFloat! = 5
     let screenHeight = UIScreen.main.bounds.height
@@ -56,6 +58,7 @@ class ViewController: UIViewController {
             menu(menu: false, pause: true, rest: false, labelText: "Red Car Win!!")
             restartButtonOutlet.isHidden = false
             menuLabelOutlet.text = "Red Car Win!!"
+            player?.stop()
         }
     }
     
@@ -71,14 +74,17 @@ class ViewController: UIViewController {
         }else{
             menu(menu: false, pause: true, rest: false, labelText: "Blue Car Win!!")
             menuLabelOutlet.text = "Blue Car Win!!"
+            player?.stop()
         }
     }
     
     @IBAction func pauseButtoneDidClicl(_ sender: UIButton) {
+        player?.stop()
         menu(menu: false, pause: true, rest: true, labelText: "Menu")
     }
     
     @IBAction func playButtonDidClick(_ sender: UIButton) {
+        playSound()
         menu(menu: true, pause: false, rest: true, labelText: "Menu")
     }
     
@@ -114,6 +120,23 @@ extension ViewController {
             numberOfClick = 106
         default:
             break
+        }
+    }
+    
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "running", withExtension: "mp3") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }

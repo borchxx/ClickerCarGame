@@ -13,6 +13,7 @@
 		84B90A452412FCDD004697BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B90A432412FCDD004697BF /* Main.storyboard */; };
 		84B90A472412FCE4004697BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B90A462412FCE4004697BF /* Assets.xcassets */; };
 		84B90A4A2412FCE4004697BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B90A482412FCE4004697BF /* LaunchScreen.storyboard */; };
+		84D7523324169ED700B7D21B /* running.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84D7523224169ED700B7D21B /* running.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		84B90A462412FCE4004697BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B90A492412FCE4004697BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B90A4B2412FCE4004697BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D7523224169ED700B7D21B /* running.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = running.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				84B90A3F2412FCDD004697BF /* SceneDelegate.swift */,
 				84B90A412412FCDD004697BF /* ViewController.swift */,
 				84B90A432412FCDD004697BF /* Main.storyboard */,
+				84D7523224169ED700B7D21B /* running.mp3 */,
 				84B90A462412FCE4004697BF /* Assets.xcassets */,
 				84B90A482412FCE4004697BF /* LaunchScreen.storyboard */,
 				84B90A4B2412FCE4004697BF /* Info.plist */,
@@ -127,6 +130,7 @@
 			files = (
 				84B90A4A2412FCE4004697BF /* LaunchScreen.storyboard in Resources */,
 				84B90A472412FCE4004697BF /* Assets.xcassets in Resources */,
+				84D7523324169ED700B7D21B /* running.mp3 in Resources */,
 				84B90A452412FCDD004697BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
