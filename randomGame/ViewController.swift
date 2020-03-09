@@ -11,10 +11,13 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var redCarScore: UILabel!
+    @IBOutlet weak var blueCarScore: UILabel!
+    
     @IBOutlet weak var restartButtonOutlet: UIButton!
     @IBOutlet weak var redButtonOutlet: UIButton!
     @IBOutlet weak var blueButtonOutlet: UIButton!
-    
     
     @IBOutlet weak var menuLabelOutlet: UILabel!
     @IBOutlet weak var pauseOutlet: UIButton!
@@ -28,7 +31,10 @@ class ViewController: UIViewController {
     
     let temp: CGFloat! = 5
     let screenHeight = UIScreen.main.bounds.height
+   
     
+    var tempRedScore: Int = 0
+    var tempBlueScore: Int = 0
     var redCarflag: Int = 0
     var blueCarflag: Int = 0
     var numberOfClick: Int!
@@ -39,8 +45,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(screenHeight)
-        
-        
         restartButtonOutlet.isHidden = true
         menuLabelOutlet.text = "Menu"
         menu(menu: false, pause: true, rest: true, labelText: "Menu")
@@ -59,6 +63,9 @@ class ViewController: UIViewController {
             restartButtonOutlet.isHidden = false
             menuLabelOutlet.text = "Red Car Win!!"
             player?.stop()
+            tempRedScore += 1
+            redCarScore.text = String(tempRedScore)
+
         }
     }
     
@@ -75,6 +82,8 @@ class ViewController: UIViewController {
             menu(menu: false, pause: true, rest: false, labelText: "Blue Car Win!!")
             menuLabelOutlet.text = "Blue Car Win!!"
             player?.stop()
+            tempBlueScore += 1
+            blueCarScore.text = String(tempBlueScore)
         }
     }
     
